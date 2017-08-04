@@ -1,36 +1,28 @@
-import { Extension } from "@teamsql-extensions/ts-extension-sdk/dist/source/Extension";
-import { IExtensionContextMenu } from "@teamsql-extensions/ts-extension-sdk/dist/source/interfaces/groups/IExtensionContextMenu"
-import { MenuItem } from "@teamsql-extensions/ts-extension-sdk/dist/source/menu/MenuItem"
-import { DataGridCellContainer } from "@teamsql-extensions/ts-extension-sdk/dist/source/data/DataGridCellContainer"
-import { DataGridCell } from "@teamsql-extensions/ts-extension-sdk/dist/source/data/DataGridCell"
-import { IMenuItemAction } from "@teamsql-extensions/ts-extension-sdk/dist/source/interfaces/menu/IMenuItemAction"
-import * as fs from "fs";
-import * as path from "path";
-import * as url from "url";
-
-export class TeamSQLExtension extends Extension implements IExtensionContextMenu {
-
-    getMenu(): Array<MenuItem> {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Extension_1 = require("@teamsql-extensions/ts-extension-sdk/dist/source/Extension");
+const MenuItem_1 = require("@teamsql-extensions/ts-extension-sdk/dist/source/menu/MenuItem");
+class TeamSQLExtension extends Extension_1.Extension {
+    getMenu() {
         let me = this;
-        let menu = new Array<MenuItem>();
-        let showMenuFunction: IMenuItemAction;
-
-        let menuItem = new MenuItem("Show in Google Maps", null, (selectedData: DataGridCellContainer[], allData: DataGridCellContainer[]) => {
+        let menu = new Array();
+        let showMenuFunction;
+        let menuItem = new MenuItem_1.MenuItem("Show in Google Maps", null, (selectedData, allData) => {
             if (selectedData !== null && selectedData !== undefined && Array.isArray(selectedData) && selectedData.length === 1 && selectedData[0].cells.length === 2) {
                 var lat = selectedData[0].cells[0].value;
                 var lng = selectedData[0].cells[1].value;
                 var reg = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}");
-
                 if (reg.exec(lat)) {
                     //do nothing
-                } else {
+                }
+                else {
                     this.showAlert("First value must be latitude.");
                     return;
                 }
-
                 if (reg.exec(lng)) {
                     //do nothing
-                } else {
+                }
+                else {
                     this.showAlert("First value must be longitude.");
                     return;
                 }
@@ -41,9 +33,10 @@ export class TeamSQLExtension extends Extension implements IExtensionContextMenu
             else {
                 this.showAlert("Select only 2 cells, first item must be latitude then longitude.");
             }
-
         });
         menu.push(menuItem);
         return menu;
     }
 }
+exports.TeamSQLExtension = TeamSQLExtension;
+//# sourceMappingURL=index.js.map
