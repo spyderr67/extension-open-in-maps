@@ -19,19 +19,13 @@ export class TeamSQLExtension extends Extension implements IExtensionContextMenu
             if (selectedData !== null && selectedData !== undefined && Array.isArray(selectedData) && selectedData.length === 1 && selectedData[0].cells.length === 2) {
                 var lat = selectedData[0].cells[0].value;
                 var lng = selectedData[0].cells[1].value;
-                var reg = new RegExp("^-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,6}");
+                var result = lat + "," + lng;
+                var reg = /-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,},-?([1-8]?[1-9]|[1-9]0)\.{1}\d{1,}/;
 
-                if (reg.exec(lat)) {
+                if (reg.exec(result)) {
                     //do nothing
                 } else {
-                    this.showAlert("First value must be latitude.");
-                    return;
-                }
-
-                if (reg.exec(lng)) {
-                    //do nothing
-                } else {
-                    this.showAlert("First value must be longitude.");
+                    this.showAlert("First item must be latitude then longitude.");
                     return;
                 }
                 var result = lat + "," + lng;
