@@ -1,0 +1,17 @@
+{
+    "files.exclude": {
+        "node_modules/": true,
+        "**/.git": true,
+        "**/.DS_Store": true,
+        "source/**/*.js": true,
+        "source/**/*.d.ts": true,
+        "source/**/*.js.map": true,
+        "test/**/*.js": true,
+        "*.js": true,
+        "test/**/*.d.ts": true,
+        "test/**/*.js.map": true,
+        "*.js.map": true,
+        "*.d.ts": true
+    },
+    "eslint.enable": false
+}

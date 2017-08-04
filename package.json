@@ -1,0 +1,21 @@
+{
+  "name": "@teamsql-extensions/open-in-maps",
+  "version": "1.0.1",
+  "description": "Creates Google Maps link from selected latitude and longitude",
+  "main": "index",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Can Abacigil <abacigil@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "typings": "2.1.0",
+    "@types/node": "^7.0.10"
+  },
+  "dependencies": {
+    "@teamsql-extensions/ts-extension-sdk": "0.0.1"
+  },
+  "teamsql": {
+    "type": "context-menu"
+  }
+}
