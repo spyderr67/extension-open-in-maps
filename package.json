@@ -13,9 +13,12 @@
     "@types/node": "^7.0.10"
   },
   "dependencies": {
-    "@teamsql-extensions/ts-extension-sdk": "0.0.1"
+    "@teamsql-extensions/ts-extension-sdk": "0.1.9"
   },
   "teamsql": {
-    "type": "context-menu"
+    "id": "open-in-maps",
+    "type": "context-menu",
+    "secret": "592d3ce0-dc73-4d37-95d3-1cff013ded17",
+    "name": "Open Google Maps"
   }
 }
