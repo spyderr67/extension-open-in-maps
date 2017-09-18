@@ -40,3 +40,4 @@ test/**/*.d.ts
 test/**/*.d.ts.map
 out
 package
+*.js
