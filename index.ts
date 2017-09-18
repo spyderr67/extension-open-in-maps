@@ -1,9 +1,9 @@
-import { Extension } from "@teamsql-extensions/ts-extension-sdk/dist/source/Extension";
-import { IExtensionContextMenu } from "@teamsql-extensions/ts-extension-sdk/dist/source/interfaces/groups/IExtensionContextMenu"
-import { MenuItem } from "@teamsql-extensions/ts-extension-sdk/dist/source/menu/MenuItem"
-import { DataGridCellContainer } from "@teamsql-extensions/ts-extension-sdk/dist/source/data/DataGridCellContainer"
-import { DataGridCell } from "@teamsql-extensions/ts-extension-sdk/dist/source/data/DataGridCell"
-import { IMenuItemAction } from "@teamsql-extensions/ts-extension-sdk/dist/source/interfaces/menu/IMenuItemAction"
+import { Extension } from "@teamsqlio/ts-extension-sdk/dist/source/Extension";
+import { IExtensionContextMenu } from "@teamsqlio/ts-extension-sdk/dist/source/interfaces/groups/IExtensionContextMenu"
+import { MenuItem } from "@teamsqlio/ts-extension-sdk/dist/source/menu/MenuItem"
+import { DataGridCellContainer } from "@teamsqlio/ts-extension-sdk/dist/source/data/DataGridCellContainer"
+import { DataGridCell } from "@teamsqlio/ts-extension-sdk/dist/source/data/DataGridCell"
+import { IMenuItemAction } from "@teamsqlio/ts-extension-sdk/dist/source/interfaces/menu/IMenuItemAction"
 import * as fs from "fs";
 import * as path from "path";
 import * as url from "url";

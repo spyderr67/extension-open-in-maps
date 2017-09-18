@@ -1,7 +1,7 @@
 {
   "name": "@teamsql-extensions/open-in-maps",
   "version": "1.0.1",
-  "description": "Creates Google Maps link from selected latitude and longitude",
+  "description": "You can use this extension to quickly open a Google Maps window.",
   "main": "index",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -13,7 +13,7 @@
     "@types/node": "^7.0.10"
   },
   "dependencies": {
-    "@teamsql-extensions/ts-extension-sdk": "0.1.9"
+    "@teamsqlio/ts-extension-sdk": "0.2.6"
   },
   "teamsql": {
     "id": "open-in-maps",
